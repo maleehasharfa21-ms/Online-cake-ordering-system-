@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customize Your Cake</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #fff5f7;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 600px;
+      margin: 40px auto;
+      background: #fff;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      padding: 25px;
+    }
+
+    h2 {
+      text-align: center;
+      color: #b30059;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+      color: #444;
+    }
+
+    select, input[type="text"], textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 15px;
+    }
+
+    textarea {
+      height: 80px;
+      resize: none;
+    }
+
+    .btn {
+      display: block;
+      background-color: #ff5c8d;
+      color: white;
+      text-align: center;
+      padding: 12px;
+      border: none;
+      border-radius: 10px;
+      margin-top: 25px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .btn:hover {
+      background-color: #e14d7c;
+    }
+
+    .back {
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    .back a {
+      color: #b30059;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h2>🎂 Customize Your Cake</h2>
+
+    <form action="confirmation.html">
+      <label for="flavor">Select Flavor:</label>
+      <select id="flavor" name="flavor" required>
+        <option value="">Choose a flavor</option>
+        <option value="vanilla">Vanilla</option>
+        <option value="chocolate">Chocolate</option>
+        <option value="redvelvet">Red Velvet</option>
+        <option value="blackforest">Black Forest</option>
+        <option value="butterscotch">Butterscotch</option>
+      </select>
+
+      <label for="toppings">Toppings:</label>
+      <select id="toppings" name="toppings">
+        <option value="">Choose topping</option>
+        <option value="choco chips">Choco Chips</option>
+        <option value="fruits">Fresh Fruits</option>
+        <option value="nuts">Crushed Nuts</option>
+        <option value="sprinkles">Color Sprinkles</option>
+      </select>
+
+      <label for="shape">Cake Shape:</label>
+      <select id="shape" name="shape">
+        <option value="">Select shape</option>
+        <option value="round">Round</option>
+        <option value="square">Square</option>
+        <option value="heart">Heart</option>
+      </select>
+
+      <label for="message">Cake Message:</label>
+      <input type="text" id="message" name="message" placeholder="Write message on cake (optional)">
+
+      <label for="size">Cake Size (in Kg):</label>
+      <select id="size" name="size">
+        <option value="">Select size</option>
+        <option value="0.5">0.5 Kg</option>
+        <option value="1">1 Kg</option>
+        <option value="2">2 Kg</option>
+        <option value="3">3 Kg</option>
+      </select>
+
+      <button type="submit" class="btn">Confirm Customization</button>
+    </form>
+
+    <div class="back">
+      <a href="menu.html">← Back to Cakes</a>
+    </div>
+  </div>
+
+</body>
+</html>

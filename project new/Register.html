@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Register</title>
+<style>
+    body{
+        font-family: Arial;
+        background: #f7e9f2;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        height:100vh;
+        margin:0;
+    }
+    .form-box{
+        background:#fff;
+        padding:25px;
+        width:350px;
+        border-radius:10px;
+        box-shadow:0 0 10px rgba(0,0,0,0.2);
+    }
+    .form-box h2{
+        text-align:center;
+        color:#d63384;
+        margin-bottom:15px;
+    }
+    .form-box input{
+        width:100%;
+        padding:10px;
+        margin:8px 0;
+        border:1px solid #ccc;
+        border-radius:5px;
+    }
+    .form-box button{
+        width:100%;
+        padding:10px;
+        background:#d63384;
+        color:#fff;
+        border:none;
+        font-size:16px;
+        border-radius:5px;
+        cursor:pointer;
+    }
+    .form-box button:hover{
+        background:#b02a6e;
+    }
+    .link{
+        text-align:center;
+        margin-top:10px;
+        font-size:14px;
+    }
+</style>
+</head>
+<body>
+
+<div class="form-box">
+<h2>Create Account</h2>
+
+<form action="login.html">
+    <input type="text" placeholder="User Name" required>
+        <input type="tel" placeholder="Phone Number" required>
+    <input type="email" placeholder="Email" required>
+    <input type="password" placeholder="Email" required>
+    <input type="password" placeholder="Address" required>
+    <button type="submit">Register</button>
+</form>
+
+<div class="link">
+Already have an account? <a href="login.html">Login</a>
+</div>
+
+</div>
+<script>
+document.getElementById("registerForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  const User Name = document.getElementById("User Name").value.trim();
+  const Phone Number = document.getElementById("Phone Number").value.trim();
+const Email = document.getElementById("Email").value.trim();
+const  Password= document.getElementById("Password").value.trim();
+const Address = document.getElementById("Address").value.trim();
+
+
+  if (username === "" ||Phone Number  === "" || Email=== ""|| Email === ""|| Address === "") {
+    alert("Please fill in both username and password.");
+  } else {
+    alert("Redirecting to Home page...");
+    window.location.href = "home.html"; // ✅ goes to Register page instead of Home
+  }
+});
+</script>
+
+</body>
+</html>

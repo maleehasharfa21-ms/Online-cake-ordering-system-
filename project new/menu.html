@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu | Cakeinet</title>
+  <link rel="stylesheet" href="menu.css">
+</head>
+<body>
+
+<header>
+  <div class="logo">🍰 Cakeinet</div>
+  <nav>
+    <a href="home.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="menu.html" class="active">Menu</a>
+     <a href="payment.html">Payment</a>
+    <a href="contact.html">Contact Us</a>
+  
+  </nav>
+</header>
+
+<section class="menu">
+  <h1>Our Delicious Cakes</h1>
+
+  <label>Categories:</label>
+  <select id="category">
+    <option value="">All</option>
+    <option value="chocolate">Chocolate</option>
+    <option value="brownie">Brownie</option>
+    <option value="vanilla">Vanilla</option>
+    <option value="redvelvet">Red Velvet</option>
+    <option value="custom">Customize</option>
+  </select>
+
+  <div class="cake-container">
+
+    <!-- Chocolate Cakes -->
+    <div class="cake-card" data-category="chocolate">
+      <img src="chocolate fudge cake.jpeg">
+      <h3>Chocolate Fudge Cake</h3>
+      <p>Rich chocolate fudge layers.</p>
+      <span>Rs.2500</span>
+      <button onclick="orderCake('Chocolate Fudge Cake')">Order Now</button>
+    </div>
+
+    <div class="cake-card" data-category="chocolate">
+      <img src="chocolate truffle cake.jpg">
+      <h3>Chocolate Truffle Cake</h3>
+      <p>Dark chocolate truffle cream.</p>
+      <span>Rs.3000</span>
+      <button onclick="orderCake('Chocolate Truffle Cake')">Order Now</button>
+    </div>
+
+    <div class="cake-card" data-category="chocolate">
+      <img src="dark chocolate cake.jpg">
+      <h3>Dark Chocolate Cake</h3>
+      <p>Premium dark chocolate layers.</p>
+      <span>Rs.2300</span>
+      <button onclick="orderCake('Dark Chocolate Cake')">Order Now</button>
+    </div>
+
+    <div class="cake-card" data-category="chocolate">
+      <img src="Lava cake.jpg">
+      <h3>Lava Cake</h3>
+      <p>Molten chocolate center.</p>
+      <span>Rs.1800</span>
+      <button onclick="orderCake('Lava Cake')">Order Now</button>
+    </div>
+
+    <!-- Brownies -->
+    <div class="cake-card" data-category="brownie">
+      <img src="nutella brownie.jpg">
+      <h3>Nutella Brownie</h3>
+      <p>Nutella filled brownie.</p>
+      <span>Rs.700</span>
+      <button onclick="orderCake('Nutella Brownie')">Order Now</button>
+    </div>
+
+    <div class="cake-card" data-category="brownie">
+      <img src="fudge brownie.jpeg">
+      <h3>Classic Fudge Brownie</h3>
+      <p>Dense fudgy brownie.</p>
+      <span>Rs.650</span>
+      <button onclick="orderCake('Classic Fudge Brownie')">Order Now</button>
+    </div>
+
+    <div class="cake-card" data-category="brownie">
+      <img src="double chip brownie.jpeg">
+      <h3>Double Chip Brownie</h3>
+      <p>White & dark chips.</p>
+      <span>Rs.750</span>
+      <button onclick="orderCake('Double Chip Brownie')">Order Now</button>
+    </div>
+
+    <div class="cake-card" data-category="brownie">
+      <img src="caramel brownie.jpeg">
+      <h3>Caramel Brownie</h3>
+      <p>Caramel topping.</p>
+      <span>Rs.800</span>
+      <button onclick="orderCake('Caramel Brownie')">Order Now</button>
+    </div>
+
+    <!-- Vanilla Cakes -->
+    <div class="cake-card" data-category="vanilla">
+      <img src="chocolate vanila cake.jpg">
+      <h3>Chocolate Vanilla Cake</h3>
+      <p>Chocolate swirl vanilla cake.</p>
+      <span>Rs.1800</span>
+      <button onclick="orderCake('Chocolate Vanilla Cake')">Order Now</button>
+    </div>
+
+    <div class="cake-card" data-category="vanilla">
+      <img src="classic vanila cake.jpeg">
+      <h3>Classic Vanilla Cake</h3>
+      <p>Soft vanilla frosting.</p>
+      <span>Rs.1500</span>
+      <button onclick="orderCake('Classic Vanilla Cake')">Order Now</button>
+    </div>
+
+    <div class="cake-card" data-category="vanilla">
+      <img src="vanila coffee cake.jpg">
+      <h3>Vanilla Coffee Cake</h3>
+      <p>Coffee infused cake.</p>
+      <span>Rs.2000</span>
+      <button onclick="orderCake('Vanilla Coffee Cake')">Order Now</button>
+    </div>
+
+    <div class="cake-card" data-category="vanilla">
+      <img src="vanila rose cake.jpg">
+      <h3>Vanilla Rose Cake</h3>
+      <p>Rose flavoured cake.</p>
+      <span>Rs.2200</span>
+      <button onclick="orderCake('Vanilla Rose Cake')">Order Now</button>
+    </div>
+
+    <!-- Red Velvet -->
+    <div class="cake-card" data-category="redvelvet">
+      <img src="Red velvet cake.jpg">
+      <h3>Red Velvet Cake</h3>
+      <p>Cream cheese frosting.</p>
+      <span>Rs.3100</span>
+      <button onclick="orderCake('Red Velvet Cake')">Order Now</button>
+    </div>
+
+    <!-- Customize -->
+    <div class="cake-card" data-category="custom">
+      <h3>Customize Your Cake 🎂</h3>
+      <p>Choose flavor, toppings & message.</p>
+      <span>Price varies</span>
+      <a href="customize.html">
+        <button>Customize</button>
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<script>
+  // Order now function
+  function orderCake(cakeName) {
+    localStorage.setItem("selectedCake", cakeName);
+    window.location.href = "order.html";
+  }
+
+  // Category filter
+  const category = document.getElementById("category");
+  const cards = document.querySelectorAll(".cake-card");
+
+  category.addEventListener("change", function () {
+    const value = this.value;
+
+    cards.forEach(card => {
+      if (value === "" || card.dataset.category === value) {
+        card.style.display = "block";
+      } else {
+        card.style.display = "none";
+      }
+    });
+  });
+</script>
+
+</body>
+</html>

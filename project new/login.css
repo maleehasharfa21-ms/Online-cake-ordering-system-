@@ -1,0 +1,79 @@
+body {
+  font-family: "Poppins", sans-serif;
+  background:
+    linear-gradient(rgba(253, 226, 228, 0.6), rgba(249, 198, 180, 0.6)),
+    url("home cake.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+    .login-box {
+      background-color: #fffaf6;
+      padding: 25px 20px;
+      border-radius: 12px;
+      width: 270px;
+      box-shadow: 0 4px 10px rgba(139, 69, 19, 0.2);
+      text-align: center;
+      border: 1px solid #f4c7b8;
+    }
+
+    h2 {
+      color: #b3522a;
+      font-size: 22px;
+      margin-bottom: 6px;
+    }
+
+    p {
+      font-size: 12px;
+      color: #7a4a2a;
+      margin-bottom: 15px;
+    }
+
+    input {
+      width: 90%;
+      padding: 8px;
+      margin: 8px 0;
+      border: 1px solid #e2bfb3;
+      border-radius: 6px;
+      font-size: 13px;
+      background-color: #fffdfb;
+    }
+
+    input:focus {
+      outline: none;
+      border-color: #d48c70;
+      box-shadow: 0 0 5px rgba(212, 140, 112, 0.4);
+    }
+
+    button {
+      width: 95%;
+      padding: 9px;
+      background-color: #d1784a;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 14px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background-color: #b8623c;
+    }
+
+    .footer-text {
+      font-size: 11px;
+      color: #9c6644;
+      margin-top: 10px;
+    }
+.link{
+        text-align:center;
+        margin-top:10px;
+        font-size:14px;
+
+ 

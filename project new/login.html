@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cakelinet Customer Login</title>
+   <link rel="stylesheet" href="login.css">
+</head>
+<body>
+  <div class="login-box">
+    <h2 style="display: flex; align-items: center; justify-content: center; gap: 10px;">
+  <img src="logo.jpeg" alt="Cakeinet Logo" style="width: 40px; height: 40px; border-radius: 50%;">
+  Cakeinet
+</h2>
+<p style="text-align:center; color:#884444;">CRAVE THE SWEETNESS 🍰</p>
+  <form id="loginForm">
+<input type="text" id="username" placeholder="Enter your username" required>
+      <input type="password" id="password" placeholder="Enter your password" required pattern="\d+">
+      <button type="submit">Login</button>
+    </form>
+   <div class="link">
+don't have an account? <a href="Register.html">Register now</a>
+</div>
+
+
+  <script>
+ document.getElementById("loginForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  const username = document.getElementById("username").value.trim();
+  const password = document.getElementById("password").value.trim();
+
+  if (username === "" || password === "") {
+    alert("Please fill in both username and password.");
+  } else {
+    window.location.href = "home.html"; // ✅ goes to Register page instead of Home
+  }
+});
+  </script>
+</body>
+</html>

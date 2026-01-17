@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Payment Form</title>
+<link rel="stylesheet" href="payment.css">
+</head>
+
+<body>
+<div class="container">
+    <h2>Payment Details</h2>
+<label>Payment Method</label>
+    <div class="radio-row">
+        <label><input type="radio" name="pay" id="card" checked> Card</label>
+        <label><input type="radio" name="pay" id="cod"> Cash on Delivery</label>
+    </div>
+ <input type="number" placeholder="Amount">
+ <!-- Card Images -->
+    <div class="cards">
+        <img src="visa.jpg" alt="Visa">
+        <img src="Mastercard.webp" alt="Master">
+        <img src="amex.jpg" alt="Pay">
+    </div>
+ <!-- Card Details -->
+    <div class="card-info" id="cardBox">
+        <label>Cardholder Name</label>
+        <input type="text" placeholder="Eg: A. Kumar">
+        <label>Card Number</label>
+        <input type="number" placeholder="1234 5678 9012 3456">
+         <label>Expiry Date</label>
+        <input type="text" placeholder="MM/YY">
+         <label>CVV</label>
+        <input type="number" placeholder="123">
+    </div>
+<div class="btn-center">
+        <button id="payButton" onclick="showPopup()">Confirm & Pay</button>
+    </div>
+ <div class="small">🔒 Secure Payment — SSL Encrypted</div>
+</div>
+<!-- Popup -->
+<div class="overlay" id="overlay">
+    <div class="popup">
+        <h1>🎂 Thank You!</h1>
+        <p>
+            Thanks for ordering from <b>Cakeinet</b> 💖<br>
+            Your cake order has been successfully placed!
+        </p>
+        <button onclick="closePopup()">OK</button>
+    </div>
+</div>
+
+<script>
+let card = document.getElementById("card");
+let cod = document.getElementById("cod");
+let cardBox = document.getElementById("cardBox");
+
+card.onclick = () => cardBox.style.display = "block";
+cod.onclick = () => cardBox.style.display = "none";
+
+function showPopup(){
+    document.getElementById("overlay").style.display = "block";
+}
+
+function closePopup(){
+    document.getElementById("overlay").style.display = "none";
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cakeinet- Contact Us</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: #f8d7da; /* Light Pink Background */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            background-color: #fff0f0; 
+            width: 850px;
+            display: flex;
+            border-radius: 40px;
+            overflow: hidden;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            border: 6px solid #eecaca;
+            /* Entrance Animation */
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        .image-box {
+            flex: 1;
+            background: url('home cake.jpg') center/cover;
+            min-height: 450px;
+        }
+
+        .content-box {
+            flex: 1.2;
+            padding: 40px;
+            color: #5d3a3a;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .content-box h1 {
+            font-family: 'Brush Script MT', cursive;
+            font-size: 45px;
+            text-align: center;
+            margin-bottom: 10px;
+            color: #8b4343;
+        }
+
+        .subtext {
+            font-size: 13px;
+            text-align: center;
+            margin-bottom: 25px;
+            line-height: 1.5;
+        }
+
+        .info-list {
+            list-style: none;
+            margin-bottom: 20px;
+        }
+
+        .info-list li {
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            font-size: 15px;
+        }
+
+        .icon-circle {
+            margin-right: 15px;
+            color: #8b4343;
+            font-size: 18px;
+        }
+
+        .social-section {
+            text-align: center;
+            margin-top: 10px;
+            border-top: 1px solid #eecaca;
+            padding-top: 20px;
+        }
+
+        .social-icons {
+            margin-top: 15px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .social-btn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 45px;
+            height: 45px;
+            background-color: #8b4343;
+            color: white;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            font-size: 20px;
+        }
+
+        /* Mouse mela pogum pothu icons perisagum */
+        .social-btn:hover {
+            transform: translateY(-5px) scale(1.1);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        /* Social Media Brand Colors */
+        .fb:hover { background-color: #1877F2; }
+        .ig:hover { background-color: #E4405F; }
+        .tw:hover { background-color: #000000; }
+        .yt:hover { background-color: #FF0000; }
+
+    </style>
+</head>
+<body>
+
+    <div class="container" id="contactCard">
+        <div class="image-box"></div>
+        
+        <div class="content-box">
+            <h1>Your Cake Awaits</h1>
+            <p class="subtext">Queries, feedback, or cake orders — we're always happy to hear from you.</p>
+            
+            <ul class="info-list">
+                <li><i class="fa-solid fa-cake-candles icon-circle"></i> Cakeinet</li>
+                <li><i class="fa-solid fa-location-dot icon-circle"></i> Sammanthurai, Sri Lanka</li>
+                <li style="cursor:pointer;" onclick="makeCall()">
+                    <i class="fa-solid fa-phone icon-circle"></i> +94 77 123 4567
+                </li>
+                <li><i class="fa-solid fa-envelope icon-circle"></i> orders@Cakeinet.lk</li>
+                <li><i class="fa-solid fa-clock icon-circle"></i> Mon - Sun | 9:00 AM - 10:00 PM</li>
+            </ul>
+
+            <div class="social-section">
+                <strong>Follow Us</strong>
+                <div class="social-icons">
+                    <a href="https://facebook.com" target="_blank" class="social-btn fb">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://instagram.com" target="_blank" class="social-btn ig">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://twitter.com" target="_blank" class="social-btn tw">
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </a>
+                    <a href="https://youtube.com" target="_blank" class="social-btn yt">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Entrance animation logic
+        window.onload = function() {
+            const card = document.getElementById('contactCard');
+            setTimeout(() => {
+                card.style.transition = "all 0.8s ease-out";
+                card.style.opacity = "1";
+                card.style.transform = "translateY(0)";
+            }, 200);
+        };
+
+        function makeCall() {
+            window.location.href = "tel:+94771234567";
+        }
+    </script>
+</body>
+</html>
